@@ -1,0 +1,17 @@
+this is a C++ code that implements the A* search algorithm to find the shortest path between two nodes in an undirected graph. The A* algorithm combines the Dijkstra's algorithm for finding the shortest path with a heuristic function that estimates the remaining distance to the goal node.
+
+The code begins with the preprocessor directive #include<bits/stdc++.h>, which includes all standard libraries in our code.
+
+The constants MAXN and INF are defined to represent the maximum number of nodes and the maximum possible value for a distance, respectively.
+
+The code declares several variables and data structures, including n and m, which represent the number of nodes and edges in the graph, respectively; adj, which is an adjacency list that stores the graph; dist, which is an array that stores the minimum distance from the start node to each node; heuristic, which is an array that stores the heuristic value for each node; and s and e, which represent the start and end nodes.
+
+The function input_graph() reads in the graph from standard input and populates the adj vector accordingly.
+
+The function input_start_end() reads in the start and end nodes from standard input.
+
+The function dijkstra() implements the Dijkstra's algorithm to find the shortest path from the start node to all other nodes in the graph. It uses a priority queue to store nodes in order of increasing distance from the start node. At each step, it removes the node with the smallest distance from the queue and updates the distances of its neighbors. The process continues until the queue is empty.
+
+The function a_star() implements the A* search algorithm to find the shortest path from the start node to the goal node. It is similar to the Dijkstra's algorithm, but also considers a heuristic function that estimates the remaining distance to the goal node. The heuristic function used here is the Euclidean distance between the node and the goal node. The function uses a priority queue to store nodes in order of increasing estimated distance from the start node to the goal node. At each step, it removes the node with the smallest estimated distance from the queue and updates the distances of its neighbors.
+
+The main() function reads in the graph and start/end nodes, runs the Dijkstra's algorithm to populate the dist array, and then runs the A* algorithm to find the shortest path from the start to end node. It then prints the shortest path.
