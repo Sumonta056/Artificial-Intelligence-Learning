@@ -1,0 +1,99 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+const int MAXN = 100005;
+const int INF = 1000000007;
+int n, m; // no of nodes and edges
+vector<pair<int,int>> adj[MAXN]; // stores the graph 
+int dist[MAXN]; // min distance from the start node to each node
+int heuristic[MAXN]; // heuristic value for each node
+int s, e; 
+
+void input_graph() 
+{
+	cin >> n >> m;
+    int u, v, w;
+    for (int i = 0; i < m; i++) 
+    {
+        cin >> u >> v >> w;
+        adj[u].push_back({v, w});
+        adj[v].push_back({u, w});
+    }
+}
+
+void input_start_end() 
+{
+    cin >> s >> e;
+}
+
+void dijkstra(int start) 
+{
+    priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> pq; // min-heap
+    for (int i = 1; i <= n; i++) dist[i] = INF;
+    dist[start] = 0;
+    pq.push({0, start});
+    while (!pq.empty()) 
+    {
+    	int u = pq.top().second;
+        pq.pop();
+        for (auto v : adj[u]) 
+        {
+        	int new_dist = dist[u] + v.second;
+            if (new_dist < dist[v.first]) 
+            {
+                dist[v.first] = new_dist;
+                pq.push({new_dist, v.first});
+            }
+        }
+    }
+}
+void a_star(int start, int goal) 
+{
+	priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> pq; 
+ 	map<int,int> parent; // parent node for each node 
+ 	for (int i = 1; i <= n; i++) 
+ 	{
+    	dist[i] = INF;
+     	heuristic[i] = INF;
+ 	}
+ 	dist[start] = 0;
+ 	pq.push({0, start});
+ 	while (!pq.empty()) 
+	{
+ 		int u = pq.top().second;
+ 		pq.pop();
+ 		if (u == goal) break;
+ 		for (auto v : adj[u]) 
+ 		{
+ 			int new_dist = dist[u] + v.second;
+ 			if (new_dist < dist[v.first]) 
+			{
+ 				dist[v.first] = new_dist;
+ 				heuristic[v.first] = sqrt(pow(v.first - e, 2) + pow(v.second - e, 2)); // Euclidean distance as heuristic
+ 				parent[v.first] = u;
+ 				pq.push({dist[v.first] + heuristic[v.first], v.first});
+ 			}
+ 		}
+ 	}
+ 	// print the shortest path from start to goal
+ 	vector<int> path;
+ 	int u = goal;
+ 	while (u != start) 
+ 	{
+ 		path.push_back(u);
+ 		u = parent[u];
+ 	}
+	path.push_back(start);
+	reverse(path.begin(), path.end());
+	cout << "Shortest path: ";
+	for (auto u : path) cout << u << " ";
+ 	cout << endl;
+}
+
+int main() 
+{
+	input_graph();
+	input_start_end();
+	dijkstra(s);
+	a_star(s, e);
+}
