@@ -20,6 +20,11 @@
 
 #### 🎥 Genetic Algorithm Introduction **([👉Click Here](https://youtu.be/QEuZoefCHHU) )**
 
+#### 🎥 Solve 8 Queen using Genetic Algorithm **([👉Click Here](https://youtu.be/cwF-Vz03t2o) )**
+
+#### 🎥 Solve 4 Queen using Backtracking **([👉Click Here](https://youtu.be/cwF-Vz03t2o) )**
+
+
 ## ✍️ Learning Playlist
 
 #### 😊 Artificial Intelligence Full Tutorial Bangla (BUET): **([👉Click Here](https://youtube.com/playlist?list=PLCK1b2JkxwlieBnTBc-okFhVraathHGA1) )**
