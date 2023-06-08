@@ -24,6 +24,10 @@
 
 #### 🎥 Solve 4 Queen using Backtracking **([👉Click Here](https://youtu.be/cwF-Vz03t2o) )**
 
+#### 🎥 Minimax Algorithm **([👉Click Here](https://youtu.be/jCyBQfedI0U) )**
+
+#### 🎥 Alpha-Beta Pruning Algorithm **([👉Click Here](https://youtu.be/xMwUHNPfKu8) )**
+
 
 ## ✍️ Learning Playlist
 
