@@ -1,0 +1,33 @@
+Tt 1: analytical, comparison, theory, definition আসতে পারে 
+●	Intro
+●	Agents
+●	Dfs, Bfs
+●	Depth limited search
+●	Iterative deepening search
+●	UCS
+●	Bidirectional search - Bidirectional Search Algorithm in Artificial Intelligence in Hindi with Real Life Examples
+●	Heuristic
+●	Greedy
+●	a*
+●	IDA*
+●	Hiil climbing: 8 queen admissible heuristic
+●	Convergence of simulated annealing 
+
+Tt2:
+●	Csp - map coloring, verify variable domain and constraints
+●	Node consistency, arc consistency, unary and binary constraints
+●	N queen এ n max = ?
+●	4/8 queen solve with csp algo
+●	Mini-max
+●	Game
+●	Genetic algo - 2 slides
+
+
+Which slides are in the final?
+
+●	NEW lectures slides - 1 to 7
+●	NEW AI
+-	Copy of 8. Genetic
+-	genetic
+-	Copy of 9. Game 
+-	10. Probability Slide 
