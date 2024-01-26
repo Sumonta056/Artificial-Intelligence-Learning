@@ -1,0 +1,19 @@
+Lab Final:
+Date: 13 August, 2023
+Venue: Room no 203, IICT, SUST.
+Syllabus:
+Dfs, Bfs
+Depth limited search
+Iterative deepening search
+UCS
+
+
+Bidirectional search 
+Greedy
+A*
+Mini-max
+Alpha-beta pruning
+Genetic algorithm
+
+
+**Mam requested everyone  to learn Two-player-implementation for the final.
